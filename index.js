@@ -101,4 +101,16 @@ app.get("/", (req, res) => {
 
 });
 
-app.listen(3000, () => console.log("Server started"));
+app.get("/", (req, res) => {
+
+  res.status(200).send("Bot is running");
+
+});
+
+const PORT = process.env.PORT || 3000;
+
+app.listen(PORT, () => {
+
+  console.log(`Server started on port ${PORT}`);
+
+});
