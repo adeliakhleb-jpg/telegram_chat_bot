@@ -95,11 +95,7 @@ app.post("/webhook", async (req, res) => {
 
 });
 
-app.get("/", (req, res) => {
 
-  res.send("Bot is running");
-
-});
 
 app.get("/", (req, res) => {
 
