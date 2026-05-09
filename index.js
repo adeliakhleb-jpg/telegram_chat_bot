@@ -23,6 +23,36 @@ app.post("/webhook", async (req, res) => {
 
   const text = message.text;
 
+  f (text === "/start") {
+
+  await axios.post(
+
+    `https://api.telegram.org/bot${TELEGRAM_TOKEN}/sendMessage`,
+
+    {
+
+      chat_id: chatId,
+
+      text: `Привет.  
+
+Это пространство, где тебе не нужно быть правильным.
+
+Можешь не объяснять красиво.  
+
+Не анализировать.  
+
+Не собирать себя в “нормального”.
+
+Просто скажи, что сейчас происходит внутри.`,
+
+    }
+
+  );
+
+  return res.sendStatus(200);
+
+}
+
   try {
 
     // отправляем в Voiceflow
