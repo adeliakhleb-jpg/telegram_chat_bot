@@ -23,7 +23,7 @@ app.post("/webhook", async (req, res) => {
 
   const text = message.text;
 
-  f (text === "/start") {
+  if (text === "/start") {
 
   await axios.post(
 
