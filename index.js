@@ -93,6 +93,10 @@ app.post("/webhook", async (req, res) => {
 
     const replies = vfRes.data;
 
+    console.log("VOICEFLOW RESPONSE:");
+
+    console.log(JSON.stringify(vfRes.data, null, 2));
+    
     for (let item of replies) {
 
       if (item.type === "text") {
