@@ -55,6 +55,8 @@ app.post("/webhook", async (req, res) => {
 
   try {
 
+    console.log("VERSION:", VERSION_ID);
+    
     // отправляем в Voiceflow
 
     const vfRes = await axios.post(
